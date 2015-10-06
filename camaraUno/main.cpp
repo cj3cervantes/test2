@@ -36,11 +36,14 @@ int main(int argc, char** argv)
 {
     cv::Mat frame;
     int c;
-    CvCapture *capture = cvCaptureFromCAM(0);
+    //CvCapture *capture = cvCaptureFromCAM(0);
+    CvCapture *capture = cvCaptureFromCAM(1);
+
     while(1)
     {
         frame = cvQueryFrame(capture);
-        cv::imshow("OpenCV",frame);
+        //cv::imshow("OpenCV",frame);
+	cv::imshow("OpenCV 123",frame);
 
         c = cv::waitKey(10);
         if(c==27)
